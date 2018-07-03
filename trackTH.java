@@ -38,7 +38,7 @@ import org.codehaus.jackson.map.ObjectMapper;
 @WebServlet("/trackTH")
 public class trackTH extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-	private static final String deviceID = "4812e758-e062-4e0b-baca-ab143b4dd131";
+	private static final String deviceID = "<device id>";
 
        
     /**
@@ -171,14 +171,14 @@ public class trackTH extends HttpServlet {
 		try {
 
 			httpClient = getHTTPClient();
-			String RDMSUrl = "https://iotrdmsiotservices-s0008289464trial.hanatrial.ondemand.com/com.sap.iotservices.dms/v2/api";
+			String RDMSUrl = "https://iotrdmsiotservices-s0xxxxxxtrial.hanatrial.ondemand.com/com.sap.iotservices.dms/v2/api";
 			String invokeUrl = RDMSUrl + "/devices/" + deviceID;
 
 			httpGet = new HttpGet(invokeUrl);
 			// replace value of authorizationHeader with base64 encoded value of
-			// ì<user-name>:<password>î
+			// ‚Äú<user-name>:<password>‚Äù
 
-			authorizationHeader = "UzAwMDgyODk0NjQ6cEByQGRveDI=";
+			authorizationHeader = "<base64 encoded value of <user-name>:<password>>";
 			httpGet.addHeader("Authorization", "Basic " + authorizationHeader);
 			httpGet.addHeader("X-CSRF-Token", "Fetch");
 			response = httpClient.execute(httpGet, httpContext);
@@ -225,8 +225,8 @@ public class trackTH extends HttpServlet {
 		try {
 			httpGet = new HttpGet(requestURL);
 			// replace value of authorizationHeader with base64 encoded value of
-			// ì<user-name>:<password>î
-			authorizationHeader = "UzAwMDgyODk0NjQ6cEByQGRveDI=";
+			// ‚Äú<user-name>:<password>‚Äù
+			authorizationHeader = "<base64 encoded value of <user-name>:<password>>";
 			httpGet.addHeader("Authorization", "Basic " + authorizationHeader);
 			httpGet.addHeader("X-CSRF-Token", "Fetch");
 			response = client.execute(httpGet, httpContext);
@@ -263,7 +263,7 @@ public class trackTH extends HttpServlet {
 		CloseableHttpClient httpClient = null;
 		try {
 			httpClient = getHTTPClient();
-			String rulesRuntimeUrl = "https://bpmrulesruntimebpm-s0008289464trial.hanatrial.ondemand.com/";
+			String rulesRuntimeUrl = "https://bpmrulesruntimebpm-s00xxxxxxtrial.hanatrial.ondemand.com/";
 			String xsrfTokenUrl = rulesRuntimeUrl + "rules-service/v1/rules/xsrf-token";
 			String invokeUrl = rulesRuntimeUrl
 					+ "rules-service/v1/rules/invoke?rule_service_name=TemperatureHumidityCheck::TExceededService";
@@ -275,8 +275,8 @@ public class trackTH extends HttpServlet {
 				httpPost.addHeader("X-CSRF-Token", xsrfToken);
 			}
 			// replace value of authorizationHeader with base64 encoded value of
-			// ì<user-name>:<password>î
-			String authorizationHeader = "UzAwMDgyODk0NjQ6cEByQGRveDI=";
+			// ‚Äú<user-name>:<password>‚Äù
+			String authorizationHeader = "<base64 encoded value of <user-name>:<password>>";
 			httpPost.addHeader("Authorization", "Basic " + authorizationHeader);
 
 			// construct input data to the rules service
@@ -330,7 +330,7 @@ public class trackTH extends HttpServlet {
 		CloseableHttpClient httpClient = null;
 		try {
 			httpClient = getHTTPClient();
-			String rulesRuntimeUrl = "https://bpmrulesruntimebpm-s0008289464trial.hanatrial.ondemand.com/";
+			String rulesRuntimeUrl = "https://bpmrulesruntimebpm-s0xxxxxxxtrial.hanatrial.ondemand.com/";
 			String xsrfTokenUrl = rulesRuntimeUrl + "rules-service/v1/rules/xsrf-token";
 			String invokeUrl = rulesRuntimeUrl
 					+ "rules-service/v1/rules/invoke?rule_service_name=TemperatureHumidityCheck::HExceededService";
@@ -342,8 +342,8 @@ public class trackTH extends HttpServlet {
 				httpPost.addHeader("X-CSRF-Token", xsrfToken);
 			}
 			// replace value of authorizationHeader with base64 encoded value of
-			// ì<user-name>:<password>î
-			String authorizationHeader = "UzAwMDgyODk0NjQ6cEByQGRveDI=";
+			// ‚Äú<user-name>:<password>‚Äù
+			String authorizationHeader = "<base64 encoded value of <user-name>:<password>>";
 			httpPost.addHeader("Authorization", "Basic " + authorizationHeader);
 
 			// construct input data to the rules service
@@ -395,7 +395,7 @@ public class trackTH extends HttpServlet {
 		CloseableHttpClient httpClient = null;
 		try {
 			httpClient = getHTTPClient();
-			String rulesRuntimeUrl = "https://bpmworkflowruntimewfs-s0008289464trial.hanatrial.ondemand.com/";
+			String rulesRuntimeUrl = "https://bpmworkflowruntimewfs-s00xxxxxxtrial.hanatrial.ondemand.com/";
 			String xsrfTokenUrl = rulesRuntimeUrl + "workflow-service/rest/v1/xsrf-token";
 			String invokeUrl = rulesRuntimeUrl + "workflow-service/rest/v1/workflow-instances";
 			httpPost = new HttpPost(invokeUrl);
@@ -406,8 +406,8 @@ public class trackTH extends HttpServlet {
 				httpPost.addHeader("X-CSRF-Token", xsrfToken);
 			}
 			// replace value of authorizationHeader with base64 encoded value of
-			// ì<user-name>:<password>î
-			String authorizationHeader = "UzAwMDgyODk0NjQ6cEByQGRveDI=";
+			// ‚Äú<user-name>:<password>‚Äù
+			String authorizationHeader = "<base64 encoded value of <user-name>:<password>>";
 			httpPost.addHeader("Authorization", "Basic " + authorizationHeader);
 
 			// construct input data to the workflow service to create instance
@@ -465,7 +465,7 @@ public class trackTH extends HttpServlet {
 		CloseableHttpClient httpClient = null;
 		try {
 			httpClient = getHTTPClient();
-			String rulesRuntimeUrl = "https://bpmworkflowruntimewfs-s0008289464trial.hanatrial.ondemand.com/";
+			String rulesRuntimeUrl = "https://bpmworkflowruntimewfs-sxxxxxxtrial.hanatrial.ondemand.com/";
 			String xsrfTokenUrl = rulesRuntimeUrl + "workflow-service/rest/v1/xsrf-token";
 			String invokeUrl = rulesRuntimeUrl + "workflow-service/rest/v1/workflow-instances";
 			httpPost = new HttpPost(invokeUrl);
@@ -476,8 +476,8 @@ public class trackTH extends HttpServlet {
 				httpPost.addHeader("X-CSRF-Token", xsrfToken);
 			}
 			// replace value of authorizationHeader with base64 encoded value of
-			// ì<user-name>:<password>î
-			String authorizationHeader = "UzAwMDgyODk0NjQ6cEByQGRveDI=";
+			// ‚Äú<user-name>:<password>‚Äù
+			String authorizationHeader = "<base64 encoded value of <user-name>:<password>>";
 			httpPost.addHeader("Authorization", "Basic " + authorizationHeader);
 
 			// construct input data to the workflow service to create instance
